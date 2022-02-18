@@ -52,11 +52,11 @@
                         @else
 
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Mis Publicaciones</a>
+                                <a class="nav-link" href="">Mis Tickets</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Categorias</a>
+                                <a class="nav-link" href="{{ route('get.categories') }}">Categorias</a>
                             </li>
 
                             <li class="nav-item dropdown">

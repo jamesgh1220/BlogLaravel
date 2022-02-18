@@ -21,6 +21,10 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('/createTicket', 'TicketController@create')->name('create.ticket');
 Route::post('/createTicket', 'TicketController@save')->name('save.ticket');
+Route::get('/ticket/{id}', 'TicketController@getTicket')->name('get.ticket');
+Route::get('/ticket/categories/{category_id}', 'TicketController@ticketByCategory')->name('ticket.category');
+
 
 Route::get('/createCategory', 'CategoryController@create')->name('create.category');
 Route::post('/createCategory', 'CategoryController@save')->name('save.category');
+Route::get('/categories', 'CategoryController@all')->name('get.categories');

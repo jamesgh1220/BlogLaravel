@@ -44,4 +44,18 @@ class TicketController extends Controller
 
         
     }
+
+    public function getTicket($id) {
+        $ticket = Ticket::find($id);
+        return view('ticket.ticket', [
+            'ticket' => $ticket
+        ]);
+    }
+
+    public function ticketByCategory($category_id) {
+        $tickets = Ticket::where('category_id', $category_id);
+        return view('category.category', [
+            'tickets' => $tickets
+        ]);
+    }
 }
