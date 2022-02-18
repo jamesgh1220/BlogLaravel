@@ -10,3 +10,11 @@
 .card-title {
     height: 70px;
 }
+
+.text-right {
+    float: right;
+}
+
+.options {
+    float: left;
+}

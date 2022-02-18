@@ -15,7 +15,7 @@
         @include('includes.message')
             <div class="card text-center">
                 <div class="card-header mt-2">
-                    <h4>Todas las categorias</h4>
+                    <h4>Mis Tickets</h4>
                 </div>
                 <div class="card-body">
                     @if (session('status'))
@@ -25,15 +25,26 @@
                     @endif
                 </div>
                 <div class="row mb-3">
-                    @foreach ($categories as $category)
+                    @foreach ($tickets as $ticket)
                         <div class="card-ticket col-sm-5 mb-6">
                             <div class="card mt-4">
                                 <div class="card text-center">
                                     <div class="card-header mt-1">
-                                        <h5>{{$category->name}}</h5>
+                                        <h5>{{$ticket->tittle}}</h5>
                                     </div>
-                                    <div class="card-body mt-2 mb-2">
-                                        <a href="{{route('ticket.category', ['id' => $category->id])}}" class="btn-ticket btn btn-primary">Ver más</a>
+                                    <div class="card-body">
+                                        <h6 class="card-title mt-3">{{$ticket->description}}</h6>
+                                        <a href="{{route('get.ticket', ['id' => $ticket->id])}}" class="btn-ticket btn btn-primary">Ver más</a>
+                                    </div>
+                                    <div class="card-footer text-muted mt-2 mb-0">
+                                        <div class="text-right">
+                                            <?php $date = substr($ticket->created_at, 0, 10); ?>
+                                            {{$date}}
+                                        </div>
+                                        <div class="options text-left">
+                                            <a class="btn-delete" href=""><img src="{{asset('img/trash.png')}}" alt="Eliminar"></a>
+                                            <a class="btn-edit ml-4" href=""><img src="{{asset('img/settings.png')}}" alt="Editar"></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -44,5 +55,4 @@
         </div>
     </div>
 </div>
-
 @endsection

@@ -52,10 +52,21 @@ class TicketController extends Controller
         ]);
     }
 
-    public function ticketByCategory($category_id) {
-        $tickets = Ticket::where('category_id', $category_id);
-        return view('category.category', [
+    public function ticketByUser() {
+        $user = \Auth::user();
+        $tickets = Ticket::where('user_id', $user->id)->get();
+        return view('ticket.userTicket', [
             'tickets' => $tickets
+        ]);
+    }
+
+    public function ticketByCategory($id) {
+        //Captura categoria
+        $category = Category::find($id);
+        $tickets = Ticket::where('category_id', $id)->get();
+        return view('category.category', [
+            'tickets' => $tickets,
+            'category' => $category
         ]);
     }
 }

@@ -19,10 +19,13 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 
+
+
 Route::get('/createTicket', 'TicketController@create')->name('create.ticket');
 Route::post('/createTicket', 'TicketController@save')->name('save.ticket');
 Route::get('/ticket/{id}', 'TicketController@getTicket')->name('get.ticket');
-Route::get('/ticket/categories/{category_id}', 'TicketController@ticketByCategory')->name('ticket.category');
+Route::get('/ticket/categories/{id}', 'TicketController@ticketByCategory')->name('ticket.category');
+Route::get('/ticketUser', 'TicketController@ticketByUser')->name('ticket.user');
 
 
 Route::get('/createCategory', 'CategoryController@create')->name('create.category');
