@@ -31,15 +31,4 @@ class CategoryController extends Controller
         ]);
     }
 
-    public function index()
-    {
-        
-        $categories = DB::table('categories')
-                ->orderBy('id', 'desc')
-                ->get();
-        return view('ticket.create', [
-            'categories' => $categories
-        ]);
-        
-    }
 }

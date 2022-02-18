@@ -20,6 +20,7 @@ Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('/createTicket', 'TicketController@create')->name('create.ticket');
+Route::post('/createTicket', 'TicketController@save')->name('save.ticket');
 
-Route::get('/createCategory', 'CategoryController@index')->name('create.category');
+Route::get('/createCategory', 'CategoryController@create')->name('create.category');
 Route::post('/createCategory', 'CategoryController@save')->name('save.category');

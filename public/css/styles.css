@@ -1,0 +1,16 @@
+.row .card-ticket {
+    margin-left: 50px;
+    
+}
+
+.card .text-center {
+    min-height: 270px;
+}
+
+.card-body .card-text{
+    height: 10px;
+}
+
+.card-title {
+    height: 70px;
+}

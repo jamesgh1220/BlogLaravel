@@ -12,7 +12,7 @@
                     Crear ticket
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="">
+                    <form method="POST" action="{{route('save.ticket')}}" class="mt-4">
                         @csrf
                         <div class="form-group row">
                             <label for="tittle" class="col-sm-4 col-form-label text-md-right">Titulo</label>
@@ -38,7 +38,7 @@
                         </div>
                         <div class="form-group row">
                             <label for="category" class="col-sm-4 mt-3 col-form-label text-md-right">Categoría</label>
-                                <select name="category" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                <select name="category_id" class="form-select form-select-lg mb-1 ml-3 mt-3" aria-label=".form-select-lg example">
                                     @if(!empty($categories))
                                         @foreach($categories as $category)
                                             <option value="{{$category->id}}">{{$category->name}}</option>
@@ -52,7 +52,7 @@
                                 @endif
                             
                         </div>
-                        <div class="form group row mt-5 pl-5 ml-5">
+                        <div class="form group row mt-5 pl-5 ml-5 mb-3">
                             <div class="col-md-6 offset-md-3">
                                 <input type="submit" class="btn btn-primary" value="Agregar">
                             </div>
