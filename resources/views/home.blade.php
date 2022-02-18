@@ -4,19 +4,34 @@
 <div class="container">
     <div class="row">
         <div class="col-md-3">
+            <div class="row">
+                <form action="">
+                    @csrf
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Buscar..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <a href=""><span class="input-group-text" id="basic-addon2">🔍</span></a>
+                        </div>
+                    </div>
+                </form>
+            </div>
             <div class="row">            
-                <a href="{{ route('create.ticket')}}" class="btn btn-success">Agregar Ticket</a>
+                <a href="{{ route('create.ticket')}}" class="btn-home btn btn-success">
+                    <p>Crear Ticket</p><img src="{{asset('img/add.png')}}" alt="Crear" class="text-right ml-3">
+                </a>
             </div>
             <div class="row mt-3">            
-                <a href="{{ route('create.category')}}" class="btn btn-success">Crear Categoría</a>
+                <a href="{{ route('create.category')}}" class="btn-home btn btn-success">
+                    <p>Crear Categoría</p><img src="{{asset('img/add.png')}}" alt="Crear" class="text-right ml-3">
+                </a>
             </div>
         </div>
 
         <div class="col-md-9">
         @include('includes.message')
-            <div class="card text-center">
+            <div class="card-ppal card text-center">
                 <div class="card-header mt-2">
-                    <h4>Últimas publicaciones</h4>
+                    <h4 class="title-pag">Últimas publicaciones</h4>
                 </div>
                 <div class="card-body">
                     @if (session('status'))

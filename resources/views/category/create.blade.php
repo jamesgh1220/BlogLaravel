@@ -9,7 +9,7 @@
         <div class="col-md-9">
             <div class="card">
                 <div class="card-header">
-                    Crear Categoría
+                    <h4 class="title-pag">Crear Categoría</h4>
                 </div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('save.category') }}">

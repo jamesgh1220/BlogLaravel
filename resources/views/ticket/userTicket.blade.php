@@ -42,7 +42,7 @@
                                             {{$date}}
                                         </div>
                                         <div class="options text-left">
-                                            <a class="btn-delete" href=""><img src="{{asset('img/trash.png')}}" alt="Eliminar"></a>
+                                            <a class="btn-delete" href="{{route('ticket.delete', ['id' => $ticket->id])}}"><img src="{{asset('img/trash.png')}}" alt="Eliminar"></a>
                                             <a class="btn-edit ml-4" href=""><img src="{{asset('img/settings.png')}}" alt="Editar"></a>
                                         </div>
                                     </div>

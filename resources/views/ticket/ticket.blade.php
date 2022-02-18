@@ -15,7 +15,7 @@
         @include('includes.message')
             <div class="card text-center">
                 <div class="card-header mt-2">
-                    <h4>Detalle del ticket</h4>
+                    <h4 class="title-pag">Detalle del ticket</h4>
                 </div>
                 <div class="card-body">
                     @if (session('status'))

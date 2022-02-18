@@ -8,8 +8,7 @@ use App\Category;
 
 class TicketController extends Controller
 {
-    public function __construct()
-    {
+    public function __construct(){
         $this->middleware('auth');
     }
 
@@ -67,6 +66,28 @@ class TicketController extends Controller
         return view('category.category', [
             'tickets' => $tickets,
             'category' => $category
+        ]);
+    }
+
+    public function delete($id) {
+        $user = \Auth::user();
+        $ticket = Ticket::find($id);
+        if ($user && ($ticket->user_id == $user->id )) {
+            $ticket->delete();
+            return redirect()->route('ticket.user')
+                        ->with([
+                            'message' => 'Ticket eliminado correctamente']);
+        }else{
+            return redirect()->route('ticket.user')
+                        ->with([
+                            'message' => 'El Ticket no se ha eliminado']);
+        }
+    }
+
+    public function edit($id) {
+        $ticket = Ticket::find($id);
+        return view('ticket.edit', [
+            'ticket' => $ticket
         ]);
     }
 }

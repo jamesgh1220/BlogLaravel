@@ -9,7 +9,7 @@
     
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'App-Blog') }}</title>
+    <title>{{ config('app.name', 'Blog Laravel') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -23,11 +23,11 @@
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+    <div class="main" id="app">
+        <nav class="navbar navbar-expand-md navbar-dark navbar-laravel">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'App-Blog') }}
+                <a class="navbar-brand text-white mt-2" href="{{ url('/') }}">
+                    <h3>{{ config('app.name', 'Blog Laravel') }}</h3>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -44,28 +44,31 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link text-white" href="{{ route('login') }}"><h5>{{ __('Login') }}</h5></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">Registro</a>
+                                <a class="nav-link text-white" href="{{ route('register') }}"><h5>Registro</h5></a>
                             </li>
                         @else
 
                             <li class="nav-item">
-                                <a class="nav-link" href="{{route('ticket.user')}}">Mis Tickets</a>
+                                <a class="nav-link text-white" href="{{route('ticket.user')}}"><h5>Mis Tickets</h5></a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('get.categories') }}">Categorias</a>
+                                <a class="nav-link text-white" href="{{ route('get.categories') }}"><h5>Categorias</h5></a>
                             </li>
 
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    <h5 class="name-menu">{{ Auth::user()->name }}</h5><span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                    <a class="link-menu dropdown-item " href="{{ route('user.config') }}">
+                                        Editar Perfil
+                                    </a>
+                                    <a class="link-menu dropdown-item " href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
