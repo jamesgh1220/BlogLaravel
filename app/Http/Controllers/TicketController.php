@@ -90,4 +90,5 @@ class TicketController extends Controller
             'ticket' => $ticket
         ]);
     }
+    
 }

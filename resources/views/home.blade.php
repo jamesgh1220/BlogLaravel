@@ -5,12 +5,12 @@
     <div class="row">
         <div class="col-md-3">
             <div class="row">
-                <form action="">
+                <form action="{{route('home')}}" method="GET">
                     @csrf
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Buscar..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <input type="text" name="search" class="form-control" placeholder="Buscar..." aria-label="Recipient's username" aria-describedby="basic-addon2">
                         <div class="input-group-append">
-                            <a href=""><span class="input-group-text" id="basic-addon2">🔍</span></a>
+                            <input type="submit" class="btn btn-success" value="🔍"></input>
                         </div>
                     </div>
                 </form>
@@ -30,6 +30,11 @@
         <div class="col-md-9">
         @include('includes.message')
             <div class="card-ppal card text-center">
+                @if($search)
+                    <div class="card-header mt-2">
+                        {{'Resultados: '.$data}}
+                    </div>
+                @endif
                 <div class="card-header mt-2">
                     <h4 class="title-pag">Últimas publicaciones</h4>
                 </div>

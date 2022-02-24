@@ -58,11 +58,5 @@ a:link, a:visited, a:active {
 }
 
 .input-group-text {
-    background-color: #42ba96;
-    border: 1px solid rgb(18, 206, 1);
-}
-
-.input-group-text:hover {
-    background-color: #39aa88;
     border: 1px solid rgb(18, 206, 1);
 }

@@ -22,11 +22,19 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $data = $request->input('search');
         $tickets = Ticket::all();
+        $search = false;
+        if (empty($tickets)) {
+            $tickets = Ticket::where('tittle', 'LIKE', "%$data%")->get();
+            $search = true;
+        }
         return view('home', [
-            'tickets' => $tickets
+            'tickets' => $tickets,
+            'data' => $data,
+            'search' => $search
         ]);
     }
 }
