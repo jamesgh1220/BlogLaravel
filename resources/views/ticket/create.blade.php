@@ -7,7 +7,7 @@
         <div class="col-md-9">
             <div class="card-ppal card">
                 <div class="card-header mt-2 text-center">
-                    <h4>Crear ticket</h4>
+                    <h4>Crear Noticia</h4>
                 </div>
                 <div class="card-body">
                     <form method="POST" action="{{route('save.ticket')}}" class="mt-3">
@@ -15,7 +15,7 @@
                         <div class="form-group row">
                             <label for="tittle" class="col-sm-4 col-form-label text-md-right">Titulo</label>
                             <div class="col-md-6">
-                                <input id="tittle" type="text" class="form-control{{ $errors->has('tittle') ? ' is-invalid' : '' }}" name="tittle" value="{{ old('tittle') }}" required autofocus>
+                                <input id="tittle" type="text" class="form-control{{ $errors->has('tittle') ? ' is-invalid' : '' }}" placelholder="Titulo" name="tittle" value="{{ old('tittle') }}" required autofocus>
                                 @if ($errors->has('tittle'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('tittle') }}</strong>
@@ -39,7 +39,7 @@
                                 <select name="category_id" class="form-select form-select-lg mb-1 ml-3" aria-label=".form-select-lg example">
                                     @if(!empty($categories))
                                         @foreach($categories as $category)
-                                            <option value="{{$category->id}}">{{$category->name}}</option>
+                                            <option value="{{$category->id}}">{{$category->name}}</p></option>
                                         @endforeach
                                     @endif
                                 </select>
@@ -50,9 +50,9 @@
                                 @endif
                             
                         </div>
-                        <div class="form group row mt2 pl-5 ml-5 mb-3">
+                        <div class="form group row mt2 pl-5 mb-3">
                             <div class="col-md-6 offset-md-3">
-                                <input type="submit" class="btn btn-primary" value="Agregar">
+                                <input type="submit" class="btn-form btn btn-primary" value="Agregar">
                             </div>
                         </div>
                     </form>

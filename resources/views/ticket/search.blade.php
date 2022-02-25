@@ -5,9 +5,9 @@
     <div class="row">
     @include('includes.sidebar')
         <div class="col-md-9">
-            <div class="card text-center">
+            <div class="card-ppal card text-center">
                 <div class="card-header mt-2">
-                    <h4 class="title-pag">Resultados de: {{$data}}</h4>
+                    <h4 class="title-pag">Noticias sobre: {{$data}}</h4>
                 </div>
                 <div class="card-body">
                     @if (session('status'))
@@ -40,7 +40,7 @@
                                         <h6 class="card-title">{{$desc}}</h6>
                                         <a href="{{route('get.ticket', ['id' => $ticket->id])}}" class="btn-ticket btn btn-primary mb-2">Ver más</a>
                                     </div>
-                                    <div class="card-footer text-muted">
+                                    <div class="card-footer text-white">
                                         <?php $date = substr($ticket->created_at, 0, 10); ?>
                                         {{$date}}
                                     </div>

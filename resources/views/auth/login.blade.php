@@ -4,11 +4,11 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header mt-2"><h4>{{ __('Login') }}</h4></div>
+            <div class="card-ppal card">
+                <div class="card-header mt-2"><h4 class="title-pag">{{ __('Login') }}</h4></div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}" class="mt-4">
+                    <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}" class="mt-3">
                         @csrf
 
                         <div class="form-group row">

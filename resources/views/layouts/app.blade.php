@@ -9,7 +9,7 @@
     
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Blog Laravel') }}</title>
+    <title>{{ config('app.name', 'NotiLaravel') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -27,7 +27,7 @@
         <nav class="navbar navbar-expand-md navbar-dark navbar-laravel">
             <div class="container">
                 <a class="navbar-brand text-white mt-2" href="{{ url('/') }}">
-                    <h3>{{ config('app.name', 'Blog Laravel') }}</h3>
+                    <h3>{{ config('app.name', 'NotiLaravel') }}</h3>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -52,7 +52,7 @@
                         @else
 
                             <li class="nav-item">
-                                <a class="nav-link text-white mt-2" href="{{route('ticket.user')}}"><h5>Mis Tickets</h5></a>
+                                <a class="nav-link text-white mt-2" href="{{route('ticket.user')}}"><h5>Mis Noticias</h5></a>
                             </li>
 
                             <li class="nav-item">

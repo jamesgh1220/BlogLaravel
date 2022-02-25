@@ -56,9 +56,9 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-3">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                        <div class="form group row mt2 pl-5 mb-3">
+                            <div class="col-md-6 offset-md-3">
+                                <button type="submit" class="btn-form btn btn-primary">
                                     Editar
                                 </button>
                             </div>

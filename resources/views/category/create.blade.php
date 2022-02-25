@@ -23,9 +23,9 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="form group row mt-2 pl-5 ml-5 mb-3">
+                        <div class="form group row mt-2 pl-5 mb-3">
                             <div class="col-md-6 offset-md-3">
-                                <input type="submit" class="btn btn-primary" value="Agregar">
+                                <input type="submit" class="btn-form btn btn-primary" value="Agregar">
                             </div>
                         </div>
                     </form>

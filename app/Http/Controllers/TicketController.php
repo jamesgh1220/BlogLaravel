@@ -37,7 +37,7 @@ class TicketController extends Controller
         
         $save = $ticket->save();
         return redirect()->route('home')->with([
-            'message' => 'El ticket ha sido creado correctamente.'
+            'message' => 'La noticia ha sido creada correctamente.'
         ]);
 
 
@@ -82,11 +82,11 @@ class TicketController extends Controller
             $ticket->delete();
             return redirect()->route('ticket.user')
                         ->with([
-                            'message' => 'Ticket eliminado correctamente']);
+                            'message' => 'Noticia eliminada correctamente']);
         }else{
             return redirect()->route('ticket.user')
                         ->with([
-                            'message' => 'El Ticket no se ha eliminado']);
+                            'message' => 'La noticia no se ha eliminado']);
         }
     }
 
@@ -129,6 +129,6 @@ class TicketController extends Controller
         $ticket->category_id = $category_id;
         $ticket->update();
         return redirect()->route('ticket.user')
-                        ->with(['message' => 'Ticket actualizado correctamente']);;
+                        ->with(['message' => 'Noticia actualizada correctamente']);;
     }
 }

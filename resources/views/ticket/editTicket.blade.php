@@ -7,7 +7,7 @@
         <div class="col-md-9">
             <div class="card-ppal card">
                 <div class="card-header mt-2 text-center">
-                    <h4>Editar ticket</h4>
+                    <h4>Editar Noticia</h4>
                 </div>
                 <div class="card-body">
                     <form method="POST" action="{{route('ticket.edit', ['id' => $ticket->id])}}" class="mt-3">
@@ -50,9 +50,9 @@
                                 @endif
                             
                         </div>
-                        <div class="form group row mt-2 pl-5 ml-5 mb-3">
+                        <div class="form group row mt-2 pl-5 mb-3">
                             <div class="col-md-6 offset-md-3">
-                                <input type="submit" class="btn btn-primary" value="Editar">
+                                <input type="submit" class="btn-form btn btn-primary" value="Editar">
                             </div>
                         </div>
                     </form>

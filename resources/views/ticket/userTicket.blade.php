@@ -8,7 +8,7 @@
         @include('includes.message')
             <div class="card-ppal card text-center">
                 <div class="card-header mt-2">
-                    <h4>Mis Tickets</h4>
+                    <h4>Mis Noticias</h4>
                 </div>
                 <div class="card-body">
                     @if (session('status'))
