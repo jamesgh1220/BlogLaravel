@@ -3,14 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-3">
-            <div class="row">            
-                <a href="{{ route('create.ticket')}}" class="btn btn-success">Agregar Ticket</a>
-            </div>
-            <div class="row mt-3">            
-                <a href="{{ route('create.category')}}" class="btn btn-success">Crear Categoría</a>
-            </div>
-        </div>
+    @include('includes.sidebar')
         <div class="col-md-9">
         @include('includes.message')
             <div class="card text-center">
@@ -33,6 +26,7 @@
                                         <h5>{{$ticket->tittle}}</h5>
                                     </div>
                                     <div class="card-body">
+                                        <p class="card-text mt-2 mb-2">{{$ticket->categories->name}}<hr></p>
                                         <h6 class="card-title mt-3">{{$ticket->description}}</h6>
                                         <a href="{{route('get.ticket', ['id' => $ticket->id])}}" class="btn-ticket btn btn-primary">Ver más</a>
                                     </div>
@@ -43,7 +37,7 @@
                                         </div>
                                         <div class="options text-left">
                                             <a class="btn-delete" href="{{route('ticket.delete', ['id' => $ticket->id])}}"><img src="{{asset('img/trash.png')}}" alt="Eliminar"></a>
-                                            <a class="btn-edit ml-4" href=""><img src="{{asset('img/settings.png')}}" alt="Editar"></a>
+                                            <a class="btn-edit ml-4" href="{{route('ticket.config', ['id' => $ticket->id])}}"><img src="{{asset('img/settings.png')}}" alt="Editar"></a>
                                         </div>
                                     </div>
                                 </div>

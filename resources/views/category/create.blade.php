@@ -3,9 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row mt-4">
-        <div class="col-md-3">
-            <a href="" class="btn btn-success">Agregar</a>
-        </div>
+    @include('includes.sidebar')
         <div class="col-md-9">
             <div class="card">
                 <div class="card-header">

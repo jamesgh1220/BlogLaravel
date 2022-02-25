@@ -3,14 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-3">
-            <div class="row">            
-                <a href="{{ route('create.ticket')}}" class="btn btn-success">Agregar Ticket</a>
-            </div>
-            <div class="row mt-3">            
-                <a href="{{ route('create.category')}}" class="btn btn-success">Crear Categoría</a>
-            </div>
-        </div>
+    @include('includes.sidebar')
         <div class="col-md-9">
         @include('includes.message')
             <div class="card text-center">

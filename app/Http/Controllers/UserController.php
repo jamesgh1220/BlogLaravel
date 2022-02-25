@@ -6,8 +6,7 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function __construct()
-    {
+    public function __construct(){
         $this->middleware('auth');
     }
 
@@ -22,7 +21,7 @@ class UserController extends Controller
         $validate = $this->validate($request, [
             'name' => 'required|string|max:255',
             'lastName' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users,email,'.$id,
+            'email' => 'required|string|email|max:255|unique:users,email,'.$id,/**Comprobando si el email coincide con el id de este objeto */
         ]);
 
         $name = $request->input('name');

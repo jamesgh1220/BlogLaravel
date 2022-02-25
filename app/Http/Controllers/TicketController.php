@@ -84,13 +84,6 @@ class TicketController extends Controller
         }
     }
 
-    public function edit($id) {
-        $ticket = Ticket::find($id);
-        return view('ticket.edit', [
-            'ticket' => $ticket
-        ]);
-    }
-
     public function search(Request $request){
         $validate = $this->validate($request, [
             'search' => 'string|required',
@@ -102,5 +95,32 @@ class TicketController extends Controller
             'tickets' => $tickets,
             'data' => $data
         ]);
+    }
+
+    public function config($id) {
+        $ticket = Ticket::find($id);
+        $categories = Category::all();
+        return view('ticket.editTicket', [
+            'ticket' => $ticket,
+            'categories' => $categories
+        ]);
+        return view('ticket.editTicket');
+    }
+
+    public function edit(Request $request, $id){
+        $ticket = Ticket::find($id);
+        $validate = $this->validate($request, [
+            'tittle' => 'string|required',
+            'description' => 'string|required'
+        ]);
+        $tittle = $request->input('tittle');
+        $description = $request->input('description');
+        $category_id = $request->input('category_id');
+        $ticket->tittle = $tittle;
+        $ticket->description = $description;
+        $ticket->category_id = $category_id;
+        $ticket->update();
+        return redirect()->route('ticket.user')
+                        ->with(['message' => 'Ticket actualizado correctamente']);;
     }
 }
