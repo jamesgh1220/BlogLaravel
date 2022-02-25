@@ -20,4 +20,16 @@
             <p>Crear Categoría</p><img src="{{asset('img/add.png')}}" alt="Crear" class="text-right ml-3">
         </a>
     </div>
+    <div class="row mt-3">
+        <button class="btn-home btn-success" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <p class="mt-1">Categorías</p><img src="{{asset('img/add.png')}}" alt="Crear" class="text-right ml-3 mt-1">
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            @if(!empty($categories))
+                @foreach($categories as $category)
+                    <a href="{{route('ticket.category', ['id' => $category->id])}}" value="{{$category->id}}">{{$category->name}}</a><br>
+                @endforeach
+            @endif
+        </div>
+    </div>
 </div>

@@ -19,6 +19,7 @@
                 </div>
                 <div class="row mb-3">
                     @foreach ($tickets as $ticket)
+                    <a href="{{route('get.ticket', ['id' => $ticket->id])}}">
                         <div class="card-ticket col-sm-5 mb-6">
                             <div class="card mt-4">
                                 <div class="card text-center">
@@ -40,13 +41,16 @@
                                         <h6 class="card-title">{{$desc}}</h6>
                                         <a href="{{route('get.ticket', ['id' => $ticket->id])}}" class="btn-ticket btn btn-primary mb-2">Ver más</a>
                                     </div>
-                                    <div class="card-footer text-white">
-                                        <?php $date = substr($ticket->created_at, 0, 10); ?>
-                                        {{$date}}
-                                    </div>
+                                    <a href="{{route('get.ticket', ['id' => $ticket->id])}}">
+                                        <div class="card-footer text-white">
+                                            <?php $date = substr($ticket->created_at, 0, 10); ?>
+                                            {{$date}}
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
+                    </a>
                     @endforeach
                 </div>
             </div>

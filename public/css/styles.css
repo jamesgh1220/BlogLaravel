@@ -1,6 +1,7 @@
- body {
+body {
     margin:0;
     background: url("../img/space.png") no-repeat center center/cover;
+    background-attachment: fixed;
     min-height: 100vh;
 }
 
@@ -54,6 +55,12 @@ a:link, a:visited, a:active {
 .card .mt-4 {
     border: 1px solid rgb(35, 248, 248) !important;
     background-color: rgba(22, 72, 116, 0.616);
+    cursor: pointer;
+}
+
+.card .mt-4:hover {
+    border: 1.7px solid rgb(56, 247, 38) !important; 
+    transition: 0.5s; 
 }
 
 .card .mt-4 .card-header,
@@ -73,6 +80,7 @@ a:link, a:visited, a:active {
     width: 60%;
     display: inline-block;
     height: 40px;
+    border-radius: 5px;
 }
 
 .btn-home p {

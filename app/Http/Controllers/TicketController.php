@@ -46,26 +46,32 @@ class TicketController extends Controller
 
     public function getTicket($id) {
         $ticket = Ticket::find($id);
+        $categories = Category::all();
         return view('ticket.ticket', [
-            'ticket' => $ticket
+            'ticket' => $ticket,
+            'categories' => $categories
         ]);
     }
 
     public function ticketByUser() {
         $user = \Auth::user();
         $tickets = Ticket::where('user_id', $user->id)->get();
+        $categories = Category::all();
         return view('ticket.userTicket', [
-            'tickets' => $tickets
+            'tickets' => $tickets,
+            'categories' => $categories
         ]);
     }
 
     public function ticketByCategory($id) {
         //Captura categoria
         $category = Category::find($id);
+        $categories = Category::all();
         $tickets = Ticket::where('category_id', $id)->get();
         return view('category.category', [
             'tickets' => $tickets,
-            'category' => $category
+            'category' => $category,
+            'categories' => $categories
         ]);
     }
 
@@ -91,9 +97,11 @@ class TicketController extends Controller
 
         $data = $request->input('search');
         $tickets = Ticket::where('tittle', 'LIKE', "%$data%")->get();
+        $categories = Category::all();
         return view('ticket.search', [
             'tickets' => $tickets,
-            'data' => $data
+            'data' => $data,
+            'categories' => $categories
         ]);
     }
 

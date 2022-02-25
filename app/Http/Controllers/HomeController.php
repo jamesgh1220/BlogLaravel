@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Ticket;
+use App\Category;
 
 class HomeController extends Controller
 {
@@ -25,8 +26,17 @@ class HomeController extends Controller
     public function index(Request $request)
     {
         $tickets = Ticket::all();
+        $categories = Category::all();
         return view('home', [
-            'tickets' => $tickets
+            'tickets' => $tickets,
+            'categories' => $categories
+        ]);
+    }
+
+    public function sidebar() {
+        $categories = Category::all();
+        return view('includes.sidebar', [
+            'categories' => $categories
         ]);
     }
 }

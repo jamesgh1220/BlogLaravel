@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Category;
 
 class UserController extends Controller
 {
@@ -11,7 +12,10 @@ class UserController extends Controller
     }
 
     public function config() {
-        return view('user.config');
+        $categories = Category::all();
+        return view('user.config', [
+            'categories' => $categories
+        ]);
     }
 
     public function edit(Request $request) {
