@@ -2,12 +2,12 @@
 
 @section('content')
 <div class="container">
-    <div class="row mt-4">
+    <div class="row">
     @include('includes.sidebar')
         <div class="col-md-9">
-            <div class="card">
-                <div class="card-header">
-                    <h4 class="title-pag">Crear Categoría</h4>
+            <div class="card-ppal card">
+                <div class="card-header mt-2 text-center">
+                    <h4>Crear Categoría</h4>
                 </div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('save.category') }}">
@@ -23,7 +23,7 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="form group row mt-5 pl-5 ml-5 mb-3">
+                        <div class="form group row mt-2 pl-5 ml-5 mb-3">
                             <div class="col-md-6 offset-md-3">
                                 <input type="submit" class="btn btn-primary" value="Agregar">
                             </div>

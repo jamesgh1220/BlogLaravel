@@ -8,9 +8,9 @@ label{
     color: #fff;
 }
 
-h4 {
+h4, h5, h6, p {
     color: #fff;
-    float: left;
+    
 }
 
 a:link, a:visited, a:active {
@@ -30,8 +30,13 @@ a:link, a:visited, a:active {
     margin-left: 50px;
 }
 
-.card {
+.card-ppal{
     background-color: rgba(240, 248, 255, 0.158);
+    border: 1px solid rgb(56, 247, 38);
+}
+
+.card-header {
+    border-bottom: 1px solid rgb(56, 247, 38);
 }
 
 .card-body .card-text{
@@ -40,6 +45,20 @@ a:link, a:visited, a:active {
 
 .card-title {
     height: 70px;
+}
+
+.card {
+    background-color: rgba(240, 248, 255, 0.158);
+}
+
+.card .mt-4 {
+    border: 1px solid rgb(35, 248, 248) !important;
+    background-color: rgba(22, 72, 116, 0.616);
+}
+
+.card .mt-4 .card-header,
+.card .mt-4 .card-body{
+    border-bottom: 1px solid rgb(35, 248, 248);
 }
 
 .text-right {

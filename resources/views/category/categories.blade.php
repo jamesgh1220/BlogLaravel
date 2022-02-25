@@ -6,7 +6,7 @@
     @include('includes.sidebar')
         <div class="col-md-9">
         @include('includes.message')
-            <div class="card text-center">
+            <div class="card-ppal card text-center">
                 <div class="card-header mt-2">
                     <h4 class="title-pag">Todas las categorias</h4>
                 </div>
@@ -26,7 +26,7 @@
                                         <h5>{{$category->name}}</h5>
                                     </div>
                                     <div class="card-body mt-2 mb-2">
-                                        <a href="{{route('ticket.category', ['id' => $category->id])}}" class="btn-ticket btn btn-primary">Ver más</a>
+                                        <a href="{{route('ticket.category', ['id' => $category->id])}}" class="btn-ticket btn btn-primary mb-2">Ver más</a>
                                     </div>
                                 </div>
                             </div>

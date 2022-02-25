@@ -6,7 +6,7 @@
     @include('includes.sidebar')
         <div class="col-md-9">
         @include('includes.message')
-            <div class="card text-center">
+            <div class="card-ppal card text-center">
                 <div class="card-header mt-2">
                     <h4 class="title-pag">Tickets categoría: {{$category->name}}</h4>
                 </div>
@@ -27,9 +27,9 @@
                                     </div>
                                     <div class="card-body">
                                         <h6 class="card-title mt-3">{{$ticket->description}}</h6>
-                                        <a href="{{route('get.ticket', ['id' => $ticket->id])}}" class="btn-ticket btn btn-primary">Ver más</a>
+                                        <a href="{{route('get.ticket', ['id' => $ticket->id])}}" class="btn-ticket btn btn-primary mb-2">Ver más</a>
                                     </div>
-                                    <div class="card-footer text-muted mt-2">
+                                    <div class="card-footer text-muted">
                                         <?php $date = substr($ticket->created_at, 0, 10); ?>
                                         {{$date}}
                                     </div>

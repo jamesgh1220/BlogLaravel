@@ -5,13 +5,13 @@
     <div class="row">
     @include('includes.sidebar')
         <div class="col-md-9">
-            <div class="card">
-                <div class="card-header mt-2">
+            <div class="card-ppal card">
+                <div class="card-header mt-2 text-center">
                     <h4>Editar Perfil</h4>
                 </div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('user.edit') }}" aria-label="{{ __('Register') }}" class="mt-4">
+                    <form method="POST" action="{{ route('user.edit') }}" aria-label="{{ __('Register') }}" class="mt-3">
                         @csrf
 
                         <div class="form-group row">
