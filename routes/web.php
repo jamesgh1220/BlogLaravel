@@ -26,9 +26,10 @@ Route::post('/configUser', 'UserController@edit')->name('user.edit');
 Route::get('/createTicket', 'TicketController@create')->name('create.ticket');
 Route::post('/createTicket', 'TicketController@save')->name('save.ticket');
 Route::get('/ticket/{id}', 'TicketController@getTicket')->name('get.ticket');
-Route::get('/ticket/categories/{id}', 'TicketController@ticketByCategory')->name('ticket.category');
+Route::get('/ticket/category/{id}', 'TicketController@ticketByCategory')->name('ticket.category');
 Route::get('/ticketUser', 'TicketController@ticketByUser')->name('ticket.user');
 Route::get('/ticketDelete/{id}', 'TicketController@delete')->name('ticket.delete');
+Route::get('/searchTicket', 'TicketController@search')->name('ticket.search');
 
 
 Route::get('/createCategory', 'CategoryController@create')->name('create.category');

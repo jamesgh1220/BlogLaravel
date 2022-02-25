@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-3">
             <div class="row">
-                <form action="{{ route('ticket.search') }}" method="get">
+                <form action="{{route('home')}}" method="GET">
                     @csrf
                     <div class="input-group mb-3">
                         <input type="text" name="search" class="form-control" placeholder="Buscar..." aria-label="Recipient's username" aria-describedby="basic-addon2">
@@ -28,10 +28,9 @@
         </div>
 
         <div class="col-md-9">
-        @include('includes.message')
-            <div class="card-ppal card text-center">
+            <div class="card text-center">
                 <div class="card-header mt-2">
-                    <h4 class="title-pag">Últimas publicaciones</h4>
+                    <h4 class="title-pag">Resultados de: {{$data}}</h4>
                 </div>
                 <div class="card-body">
                     @if (session('status'))
@@ -41,6 +40,7 @@
                     @endif
                 </div>
                 <div class="row mb-3">
+
                     @foreach ($tickets as $ticket)
                         <div class="card-ticket col-sm-5 mb-6">
                             <div class="card mt-4">

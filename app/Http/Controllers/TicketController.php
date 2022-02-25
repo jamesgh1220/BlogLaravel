@@ -90,5 +90,17 @@ class TicketController extends Controller
             'ticket' => $ticket
         ]);
     }
-    
+
+    public function search(Request $request){
+        $validate = $this->validate($request, [
+            'search' => 'string|required',
+        ]);
+
+        $data = $request->input('search');
+        $tickets = Ticket::where('tittle', 'LIKE', "%$data%")->get();
+        return view('ticket.search', [
+            'tickets' => $tickets,
+            'data' => $data
+        ]);
+    }
 }

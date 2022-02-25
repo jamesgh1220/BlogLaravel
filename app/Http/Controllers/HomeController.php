@@ -24,17 +24,9 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
-        $data = $request->input('search');
         $tickets = Ticket::all();
-        $search = false;
-        if (empty($tickets)) {
-            $tickets = Ticket::where('tittle', 'LIKE', "%$data%")->get();
-            $search = true;
-        }
         return view('home', [
-            'tickets' => $tickets,
-            'data' => $data,
-            'search' => $search
+            'tickets' => $tickets
         ]);
     }
 }

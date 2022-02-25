@@ -8,8 +8,8 @@
         </div>
         <div class="col-md-9">
             <div class="card">
-                <div class="card-header">
-                    Crear ticket
+                <div class="card-header mt-2">
+                    <h4>Crear ticket</h4>
                 </div>
                 <div class="card-body">
                     <form method="POST" action="{{route('save.ticket')}}" class="mt-4">

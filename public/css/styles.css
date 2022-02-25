@@ -1,13 +1,16 @@
-html, body {
-    height:100%;
+ body {
     margin:0;
+    background: url("../img/space.png") no-repeat center center/cover;
+    min-height: 100vh;
 }
 
-.main {
-    background: url("../img/space.png");
-    background-position: center;
-    background-repeat: no-repeat; 
-    background-size: cover;height: 100%;
+label{
+    color: #fff;
+}
+
+h4 {
+    color: #fff;
+    float: left;
 }
 
 a:link, a:visited, a:active {
@@ -27,7 +30,7 @@ a:link, a:visited, a:active {
     margin-left: 50px;
 }
 
-.card-ppal {
+.card {
     background-color: rgba(240, 248, 255, 0.158);
 }
 

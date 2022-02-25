@@ -13,7 +13,9 @@
         </div>
         <div class="col-md-9">
             <div class="card">
-                <div class="card-header">Editar Perfil</div>
+                <div class="card-header mt-2">
+                    <h4>Editar Perfil</h4>
+                </div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('user.edit') }}" aria-label="{{ __('Register') }}" class="mt-4">

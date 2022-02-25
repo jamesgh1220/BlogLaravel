@@ -52,20 +52,20 @@
                         @else
 
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="{{route('ticket.user')}}"><h5>Mis Tickets</h5></a>
+                                <a class="nav-link text-white mt-2" href="{{route('ticket.user')}}"><h5>Mis Tickets</h5></a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="{{ route('get.categories') }}"><h5>Categorias</h5></a>
+                                <a class="nav-link text-white mt-2" href="{{ route('get.categories') }}"><h5>Categorias</h5></a>
                             </li>
 
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle text-white mt-2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     <h5 class="name-menu">{{ Auth::user()->name }}</h5><span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="link-menu dropdown-item " href="{{ route('user.config') }}">
+                                    <a class="link-menu dropdown-item " href="{{ route('user.edit') }}">
                                         Editar Perfil
                                     </a>
                                     <a class="link-menu dropdown-item " href="{{ route('logout') }}"
