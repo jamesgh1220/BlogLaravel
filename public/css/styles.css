@@ -134,19 +134,19 @@ a:link, a:visited, a:active {
     border-bottom: 1px solid #fff;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1201px) {
     .btn-home {
         width: 70%;
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
     .btn-home {
         width: 70%;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
     .card .mt-4{
         width: 400px;
     }
@@ -160,13 +160,46 @@ a:link, a:visited, a:active {
     }
 }
 
-@media (max-width: 652px) {}
+@media (max-width: 653px) {
+    .btn-home {
+        width: 58%;
+        margin: 0px auto;
+        
+    }
+    .btn-ticket {
+        margin: 0px auto;
+    }
+    .col-md-3 {
+        margin-bottom: 15px;
+    }
+}
 
-@media (max-width: 540px) {}
+@media (max-width: 541px) {
+    .col-md-3 .form-control {
+        margin-left: 113px;
+        width: 270px;
+    }
+    .col-md-6 input {
+        width: 72%;
+        margin: 0px auto;
+    }
+    .form-select {
+        width: 68%;
+        margin: 0px auto !important;
+    }
+    .form-group label {
+        margin-left: 70px;
+        font-weight: bold;
+    }
+    .col-md-6 .btn-form {
+        width: 30%;
+        margin-left: 125px;
+    }
+}
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
     .card .mt-4{
-        margin-left: -25px;
+        margin-left: -29px;
         width: 340px;
     }
 
@@ -215,15 +248,11 @@ a:link, a:visited, a:active {
     }
 }
 
-@media (max-width: 393px) {
+@media (max-width: 394px) {
     
 }
-/*
-@media (max-width: 390px) {
-    
-}*/
 
-@media (max-width: 375px) {
+@media (max-width: 376px) {
     .card .mt-4{
         margin-left: -25px;
         width: 295px;
@@ -247,9 +276,17 @@ a:link, a:visited, a:active {
     }
 }
 
-@media (max-width: 360px) {}
+@media (max-width: 361px) {
+    .card .mt-4 {
+        margin-left: -28px;
+        width: 285px;
+    }
+    .col-md-3 .form-control {
+        width: 250px;
+    }
+}
 
-@media (max-width: 320px) {
+@media (max-width: 321px) {
     .col-md-6 .btn-form {
         margin-left: 60px;
     }
@@ -268,4 +305,20 @@ a:link, a:visited, a:active {
     }
 }
 
-@media (max-width: 280px) {}
+@media (max-width: 281px) {
+    .card .mt-4 {
+        margin-left: -35px;
+        width: 220px;
+    }
+    .btn-home {
+        width: 60%;
+        margin: 0px auto;
+    }
+    .col-md-3 .form-control {
+        width: 170px;
+    }
+    .col-md-6 .btn-form {
+        width: 40%;
+        margin-left: 35px;
+    }
+}
